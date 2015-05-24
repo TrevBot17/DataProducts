@@ -1,0 +1,64 @@
+---
+title       : Old Faithful Shiny Application
+subtitle    : Pitch Deck
+author      : Trevor McCalmont
+date        : May 23, 2015
+job         : 
+framework   : io2012
+highlighter : highlight.js
+hitheme     : tomorrow
+widgets     : [bootstrap, quiz, whisker]
+mode        : selfcontained
+knit        : slidify::knit2slides
+---
+
+## What Does This App Do?
+
+1. <span style="color:black;">This Shiny app constructs a customizable histogram.
+
+2. <span style="color:black;">The histogram is based on the Old Faithful data in R.
+
+3. <span style="color:black;">The user can choose how many bins are used in the histogram.
+
+4. <span style="color:black;">The user can also change the <span style="color:blue;">color<span style="color:black;"> of the plot.
+
+--- &radio
+
+## Why is This App Useful?
+
+1. It is a fun way to manipulate data.
+
+2. We get to learn how to use Shiny
+
+3. We also learn how to use Slidify
+
+4. _All of the above_
+
+*** .hint
+These answers all sound good!
+
+*** .explanation
+All of these are correct!
+
+---
+
+## Let's Take a Look at the Faithful Data
+
+A plot of the data is below:
+
+```{r, echo=FALSE}
+
+data(faithful)
+plot(faithful$eruptions, faithful$waiting, ylab="Time Between Eruptions", xlab="Eruption Duration", main="Old Faithful Geyser Data")
+
+```
+
+---
+
+## Conclusion
+
+This Shiny application is off to a great start, and there are more enhancements we can make to expand the usefulness.
+
+Since many visitors in Yellowstone want to know when Old Faithful will erupt, we could incorporate timestamps and a prediction model to help let people know when to visit the geyser in order to see an eruption and minimize waiting time.
+
+We will investigate the above and other enhancements in future iterations of the Old Faithful Shiny application.
